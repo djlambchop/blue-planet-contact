@@ -225,26 +225,25 @@
   .about{background:var(--sand);}
   .about-grid{
     display:grid;
-    grid-template-columns:340px 1fr;
+    grid-template-columns:460px 1fr;
     grid-column-gap:56px;
     align-items:start;
   }
   @media (max-width:800px){.about-grid{grid-template-columns:1fr;}}
   .about-photo-stack{
-  display:flex;
-  flex-direction:column;
-  gap:16px;
-}
-.about-photo-img{
-  width:100%;
-  aspect-ratio:3/4;
-  object-fit:cover;
-  display:block;
-  background:var(--ink);
-}
-.about-photo-stack img:first-child{object-position:35% 30%;}
-.about-photo-stack img:last-child{object-position:50% 20%;}
+    display:flex;
+    flex-direction:row;
+    gap:12px;
   }
+  .about-photo-img{
+    width:50%;
+    aspect-ratio:3/4;
+    object-fit:cover;
+    display:block;
+    background:var(--ink);
+  }
+  .about-photo-stack img:first-child{object-position:35% 30%;}
+  .about-photo-stack img:last-child{object-position:50% 20%;}
   .about-copy p{margin-bottom:18px;color:#33454B;}
   .about-copy p:last-child{margin-bottom:0;}
   .about-name{
@@ -379,14 +378,13 @@
     <h2>Kim Chaix</h2>
     <div class="about-grid" style="margin-top:36px;">
       <div class="about-photo-stack">
-  <img class="about-photo-img" src="kim-photo.jpg" alt="Kim Chaix speaking at the United Nations Climate Change conference">
-  <img class="about-photo-img" src="kim-photo-2.jpg" alt="Kim Chaix with a capybara in Latin America">
-</div>
+        <img class="about-photo-img" src="kim-photo.jpg" alt="Kim Chaix speaking at the United Nations Climate Change conference">
+        <img class="about-photo-img" src="kim-photo-2.jpg" alt="Kim Chaix with a capybara in Latin America">
       </div>
       <div class="about-copy">
         <p>Kim Chaix brings more than 20 years of senior leadership at the intersection of human rights and environmental conservation across Latin America, Africa, and the US.</p>
         <p>Kim began his career as a journalist and documentary producer for outlets including National Geographic, PBS, ABC News, and Animal Planet, before turning to conservation and philanthropy full-time.</p>
-        <p>Over the course of his career, Kim has held senior leadership roles at organizations including Rainforest Foundation US and Virunga Fund Inc., where he significantly grew philanthropic revenue and helped direct tens of millions of dollars in institutional and private funding to conservation and development programs in Africa and Latin America. He also founded The Charcoal Project, a nonprofit expanding access to clean biomass energy across sub-Saharan Africa. At The Nature Conservancy's New York chapter, Kim spearheaded the first Climate Change working group and contributed to communications strategy and major land conservation efforts.</p>
+        <p>Over the course of his career, Kim has held senior leadership roles at organizations including Rainforest Foundation US and Virunga Fund Inc., where he significantly grew philanthropic revenue and helped direct tens of millions of dollars in institutional and private funding to conservation and development programs. He also founded The Charcoal Project, a nonprofit expanding access to clean biomass energy across sub-Saharan Africa, and contributed to communications strategy and major land conservation efforts at The Nature Conservancy's New York chapter.</p>
         <p>Kim grew up between southern France and Nicaragua and now lives in Brooklyn, NY, with his partner, their cat, and Sibo, an Australian Shepherd. Outside of work, he sails and trains for triathlons.</p>
       </div>
     </div>
