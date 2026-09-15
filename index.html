@@ -230,17 +230,20 @@
     align-items:start;
   }
   @media (max-width:800px){.about-grid{grid-template-columns:1fr;}}
-  .about-photo{
-    width:100%;
-    aspect-ratio:3/4;
-    overflow:hidden;
-    background:var(--ink);
-  }
-  .about-photo img{
-    width:100%;height:100%;
-    object-fit:cover;
-    object-position:35% 30%;
-    display:block;
+  .about-photo-stack{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+.about-photo-img{
+  width:100%;
+  aspect-ratio:3/4;
+  object-fit:cover;
+  display:block;
+  background:var(--ink);
+}
+.about-photo-stack img:first-child{object-position:35% 30%;}
+.about-photo-stack img:last-child{object-position:50% 20%;}
   }
   .about-copy p{margin-bottom:18px;color:#33454B;}
   .about-copy p:last-child{margin-bottom:0;}
@@ -375,8 +378,10 @@
     <div class="kicker">About</div>
     <h2>Kim Chaix</h2>
     <div class="about-grid" style="margin-top:36px;">
-      <div class="about-photo">
-        <img src="kim-photo.jpg" alt="Kim Chaix speaking at the United Nations Climate Change conference">
+      <div class="about-photo-stack">
+  <img class="about-photo-img" src="kim-photo.jpg" alt="Kim Chaix speaking at the United Nations Climate Change conference">
+  <img class="about-photo-img" src="kim-photo-2.jpg" alt="Kim Chaix with a capybara in Latin America">
+</div>
       </div>
       <div class="about-copy">
         <p>Kim Chaix brings more than 20 years of senior leadership at the intersection of human rights and environmental conservation across Latin America, Africa, and the US.</p>
