@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blue Planet Contact — Conservation Strategy &amp; Philanthropic Advisory</title>
+<meta name="description" content="Blue Planet Contact provides communications strategy, grant writing, and philanthropic advisory for conservation organizations and funders across North America, Africa, and Latin America.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2245%22 fill=%22%231F5C73%22/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#16262E;
+    --sand:#F6F2E9;
+    --sand-deep:#EDE6D6;
+    --ocean:#1F5C73;
+    --ocean-light:#5E93A6;
+    --moss:#5B6E4A;
+    --gold:#B8935A;
+    --cream:#FBF8F1;
+    --max:1100px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Work Sans', sans-serif;
+    background:var(--sand);
+    color:var(--ink);
+    line-height:1.6;
+    font-size:17px;
+  }
+  h1,h2,h3{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    line-height:1.15;
+    letter-spacing:-0.01em;
+  }
+  a{color:inherit;}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 32px;}
+
+  /* NAV */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(22,38,46,0.92);
+    backdrop-filter:blur(6px);
+  }
+  nav.wrap{
+    display:flex;align-items:center;justify-content:space-between;
+    height:72px;
+  }
+  .wordmark{
+    font-family:'Fraunces', serif;
+    font-size:19px;
+    color:var(--cream);
+    text-decoration:none;
+    letter-spacing:0.01em;
+  }
+  .navlinks{display:flex;list-style:none;flex-wrap:nowrap;}
+  .navlinks li{display:block;margin-left:36px;}
+  .navlinks a{
+    color:var(--sand-deep);
+    text-decoration:none;
+    font-size:15px;
+    font-weight:500;
+    transition:color .2s ease;
+  }
+  .navlinks a:hover{color:var(--gold);}
+  .navtoggle{display:none;background:none;border:none;color:var(--cream);font-size:26px;cursor:pointer;}
+
+  @media (max-width:720px){
+    .navlinks{
+      position:fixed;top:72px;left:0;right:0;
+      background:var(--ink);
+      flex-direction:column;gap:0;
+      max-height:0;overflow:hidden;
+      transition:max-height .3s ease;
+    }
+    .navlinks.open{max-height:320px;}
+    .navlinks a{display:block;padding:16px 32px;border-top:1px solid rgba(255,255,255,.08);}
+    .navtoggle{display:block;}
+  }
+
+  /* HERO */
+  .hero{
+    background:linear-gradient(180deg, var(--ink) 0%, #1C333D 100%);
+    color:var(--cream);
+    padding:96px 0 80px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero .wrap{position:relative;z-index:2;}
+  .hero h1{
+    font-size:clamp(2.3rem, 5vw, 3.6rem);
+    max-width:14ch;
+    color:var(--cream);
+  }
+  .hero .tagline{
+    margin-top:22px;
+    font-size:clamp(1.05rem, 2vw, 1.3rem);
+    color:var(--ocean-light);
+    font-weight:500;
+    max-width:34ch;
+  }
+  .horizon{
+    display:block;
+    margin:48px 0 40px;
+    width:120px;
+    height:2px;
+    background:var(--gold);
+    border:none;
+  }
+  .hero .lede{
+    max-width:640px;
+    font-size:1.05rem;
+    color:#D9DFDE;
+  }
+  .hero .lede p{margin-bottom:18px;}
+  .hero .lede p:last-child{margin-bottom:0;}
+
+  /* SECTION HEADINGS */
+  .section{padding:88px 0;}
+  .section h2{
+    font-size:clamp(1.7rem, 3vw, 2.2rem);
+    color:var(--ink);
+    margin-bottom:12px;
+  }
+  .section .kicker{
+    font-size:15px;
+    color:var(--ocean);
+    font-weight:600;
+    margin-bottom:8px;
+  }
+  .section-intro{
+    max-width:600px;
+    color:#3F4E54;
+    margin-bottom:48px;
+  }
+
+  /* SERVICES */
+  .services{background:var(--sand);}
+  .service-cols{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-column-gap:56px;
+  }
+  @media (max-width:720px){.service-cols{grid-template-columns:1fr;}
+    .service-col + .service-col{margin-top:44px;}}
+  .service-col h3{
+    font-size:1.25rem;
+    color:var(--ocean);
+    margin-bottom:22px;
+    padding-bottom:14px;
+    border-bottom:2px solid var(--sand-deep);
+  }
+  .service-item{
+    padding:16px 0 16px 20px;
+    border-left:3px solid var(--sand-deep);
+    margin-bottom:4px;
+  }
+  .service-item strong{
+    display:block;
+    font-size:1.02rem;
+    margin-bottom:4px;
+    color:var(--ink);
+  }
+  .service-item p{color:#4A5A60;font-size:.97rem;}
+  .conflict-note{
+    margin-top:40px;
+    padding:22px 24px;
+    background:var(--sand-deep);
+    border-left:3px solid var(--gold);
+    font-size:.95rem;
+    color:#3F4E54;
+    max-width:640px;
+  }
+
+  /* SPECIALTY */
+  .specialty{
+    background:var(--ink);
+    color:var(--cream);
+  }
+  .specialty .kicker{color:var(--gold);}
+  .specialty h2{color:var(--cream);}
+  .specialty .section-intro{color:#C7D0D2;}
+  .spec-list{list-style:none;}
+  .spec-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    gap:24px;
+    padding:24px 0;
+    border-top:1px solid rgba(251,248,241,0.14);
+  }
+  .spec-item:last-child{border-bottom:1px solid rgba(251,248,241,0.14);}
+  .spec-name{
+    font-family:'Fraunces', serif;
+    font-size:1.15rem;
+    color:var(--cream);
+  }
+  .spec-region{
+    font-size:.92rem;
+    color:var(--ocean-light);
+    text-align:right;
+    max-width:340px;
+  }
+  .spec-tag{
+    display:inline-block;
+    font-size:.78rem;
+    color:var(--gold);
+    margin-left:10px;
+    font-weight:600;
+  }
+  @media (max-width:640px){
+    .spec-item{flex-direction:column;align-items:flex-start;gap:6px;}
+    .spec-region{text-align:left;}
+  }
+  .geo-note{
+    margin-top:32px;
+    font-size:.95rem;
+    color:#AEBBBD;
+  }
+
+  /* ABOUT */
+  .about{background:var(--sand);}
+  .about-grid{
+    display:grid;
+    grid-template-columns:340px 1fr;
+    grid-column-gap:56px;
+    align-items:start;
+  }
+  @media (max-width:800px){.about-grid{grid-template-columns:1fr;}}
+  .about-photo{
+    width:100%;
+    aspect-ratio:3/4;
+    overflow:hidden;
+    background:var(--ink);
+  }
+  .about-photo img{
+    width:100%;height:100%;
+    object-fit:cover;
+    object-position:35% 30%;
+    display:block;
+  }
+  .about-copy p{margin-bottom:18px;color:#33454B;}
+  .about-copy p:last-child{margin-bottom:0;}
+  .about-name{
+    font-size:.92rem;
+    color:var(--ocean);
+    font-weight:600;
+    margin-bottom:6px;
+  }
+
+  /* CONTACT */
+  .contact{
+    background:linear-gradient(180deg,#1C333D 0%, var(--ink) 100%);
+    color:var(--cream);
+    text-align:left;
+  }
+  .contact h2{color:var(--cream);max-width:16ch;}
+  .contact-email{
+    display:inline-block;
+    margin-top:28px;
+    font-size:1.3rem;
+    font-family:'Fraunces', serif;
+    color:var(--gold);
+    text-decoration:none;
+    border-bottom:2px solid transparent;
+    transition:border-color .2s ease;
+  }
+  .contact-email:hover{border-color:var(--gold);}
+
+  footer{
+    background:var(--ink);
+    color:#8B999C;
+    font-size:.85rem;
+    padding:28px 0 36px;
+    border-top:1px solid rgba(251,248,241,0.1);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a href="#top" class="wordmark">Blue Planet Contact</a>
+    <button class="navtoggle" id="navToggle" aria-label="Toggle menu">☰</button>
+    <ul class="navlinks" id="navLinks">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#specialty">Specialty Areas</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero" id="top">
+  <div class="wrap">
+    <h1>Clarity, strategy, and funding channeled where it matters most.</h1>
+    <p class="tagline">Consulting for the organizations doing the work — and the funders deciding where it goes.</p>
+    <hr class="horizon">
+    <div class="lede">
+      <p>Blue Planet Contact helps environmental and conservation organizations sharpen their strategy, tell their story with clarity, and secure the funding they need to protect the places and people that depend on them.</p>
+      <p>We also advise philanthropic funders committed to conservation, social justice, and ancestral knowledge — helping them identify strong partners, vet opportunities, and map the landscape so that funding under pressure to move quickly still lands where it will do the most good.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section services" id="services">
+  <div class="wrap">
+    <div class="kicker">Services</div>
+    <h2>Two sides of the same landscape</h2>
+    <p class="section-intro">22 years of nonprofit leadership, communications, and fundraising — applied on behalf of the organizations doing conservation work, and the funders who support them.</p>
+
+    <div class="service-cols">
+      <div class="service-col">
+        <h3>For Organizations</h3>
+        <div class="service-item">
+          <strong>Communications Strategy</strong>
+          <p>Messaging, campaign planning, and rebranding that helps your work land with the audiences who matter most.</p>
+        </div>
+        <div class="service-item">
+          <strong>Grant Writing</strong>
+          <p>Compelling, well-researched proposals grounded in a deep understanding of the funding landscape.</p>
+        </div>
+        <div class="service-item">
+          <strong>Strategic Planning &amp; Leadership</strong>
+          <p>Organizational strategy shaped by two decades of hands-on experience in conservation and social impact.</p>
+        </div>
+      </div>
+
+      <div class="service-col">
+        <h3>For Funders</h3>
+        <div class="service-item">
+          <strong>Philanthropic Advisory</strong>
+          <p>Opportunity identification, partner vetting, and landscape mapping that helps funders allocate resources with confidence, not just urgency.</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="conflict-note">Blue Planet Contact works with both funders and the organizations they support, which is what allows for genuine landscape-level insight. Active conflicts are disclosed and managed transparently.</p>
+  </div>
+</section>
+
+<section class="section specialty" id="specialty">
+  <div class="wrap">
+    <div class="kicker">Specialty Areas</div>
+    <h2>Where the work happens</h2>
+    <p class="section-intro">Deep, on-the-ground experience across four regions and program areas.</p>
+
+    <ul class="spec-list">
+      <li class="spec-item">
+        <span class="spec-name">North America Environmental Conservation</span>
+        <span class="spec-region">United States &amp; Canada</span>
+      </li>
+      <li class="spec-item">
+        <span class="spec-name">Africa Conservation &amp; Social Entrepreneurship</span>
+        <span class="spec-region">Sub-Saharan Africa</span>
+      </li>
+      <li class="spec-item">
+        <span class="spec-name">Rights-Based Tropical Forest Protection</span>
+        <span class="spec-region">In support of Indigenous and Local communities in Latin America &amp; the Congo Basin</span>
+      </li>
+      <li class="spec-item">
+        <span class="spec-name">Marine &amp; Coastal Conservation<span class="spec-tag">Emerging focus</span></span>
+        <span class="spec-region">New horizons</span>
+      </li>
+    </ul>
+    <p class="geo-note">Blue Planet Contact works with US-based organizations, and with international organizations seeking US-based financing.</p>
+  </div>
+</section>
+
+<section class="section about" id="about">
+  <div class="wrap">
+    <div class="kicker">About</div>
+    <h2>Kim Chaix</h2>
+    <div class="about-grid" style="margin-top:36px;">
+      <div class="about-photo">
+        <img src="kim-photo.jpg" alt="Kim Chaix speaking at the United Nations Climate Change conference">
+      </div>
+      <div class="about-copy">
+        <p>Kim Chaix brings more than 20 years of senior leadership at the intersection of human rights and environmental conservation across Latin America, Africa, and the US.</p>
+        <p>Kim began his career as a journalist and documentary producer for outlets including National Geographic, PBS, ABC News, and Animal Planet, before turning to conservation and philanthropy full-time.</p>
+        <p>At Rainforest Foundation US, he helped grow annual philanthropic revenue from $3.5M to $9M over seven years. As Director of Virunga Fund Inc., he grew the organization's annual budget from $250K to over $20M and helped steer more than $80M in institutional and private funding to conservation and development programs supporting 4 million people around Africa's oldest national park. He also founded The Charcoal Project, a nonprofit expanding access to clean biomass energy across sub-Saharan Africa, and helped shape TNC New York's communications strategy and its largest land conservation deal to date.</p>
+        <p>Kim grew up between southern France and Nicaragua and now lives in Brooklyn, NY, with his partner, their cat, and Sibo, an Australian Shepherd. Outside of work, he sails and trains for triathlons.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section contact" id="contact">
+  <div class="wrap">
+    <div class="kicker" style="color:var(--gold);">Get in touch</div>
+    <h2>Let's talk about how Blue Planet Contact can support your organization or your funding strategy.</h2>
+    <a class="contact-email" href="mailto:hello@blueplanetcontact.org">hello@blueplanetcontact.org</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    &copy; 2026 Blue Planet Contact. Brooklyn, NY.
+  </div>
+</footer>
+
+<script>
+  const toggle = document.getElementById('navToggle');
+  const links = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => links.classList.toggle('open'));
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+</script>
+
+</body>
+</html>
