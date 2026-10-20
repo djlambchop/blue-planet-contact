@@ -136,9 +136,14 @@
   .hero .wrap{position:relative;z-index:2;}
   .hero h1{
     font-size:clamp(1.9rem, 4vw, 2.9rem);
-    max-width:22ch;
+    max-width:none;
     color:var(--cream);
   }
+  .hero h1 .h-line{display:block;}
+  .hero h1 .h-init{font-size:1.25em;font-weight:600;line-height:1;}
+  .hero h1 .h-gold{color:#E8A93C;}
+  .hero h1 .h-sky{color:#8FC1DE;}
+  .hero h1 .h-sage{color:#9DB57E;}
   .hero .tagline{
     margin-top:22px;
     font-size:clamp(1.05rem, 2vw, 1.3rem);
@@ -390,7 +395,7 @@
 
 <section class="hero" id="top">
   <div class="wrap">
-    <h1>Strategy. Clear Communications. And Funding Channeled To Where it Matters Most.</h1>
+    <h1><span class="h-line"><span class="h-init h-gold">S</span>trategy</span><span class="h-line"><span class="h-init h-sky">C</span>lear communications</span><span class="h-line"><span class="h-init h-sage">A</span>nd funding channeled to where it matters most</span></h1>
     <p class="tagline">Supporting the organizations doing the work on the ground. And helping donors maximize their impact dollars.</p>
     <hr class="horizon">
     <div class="lede">
