@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Blue Planet Contact</title>
+<meta name="description" content="Get in touch with Blue Planet Contact about communications strategy, grant writing, or philanthropic advisory for conservation.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="256x256" href="favicon-256.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="canonical" href="https://blueplanetcontact.org/contact.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Contact — Blue Planet Contact">
+<meta property="og:description" content="Get in touch with Blue Planet Contact about communications strategy, grant writing, or philanthropic advisory for conservation.">
+<meta property="og:image" content="https://blueplanetcontact.org/og-image.png">
+<meta property="og:url" content="https://blueplanetcontact.org/contact.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contact — Blue Planet Contact">
+<meta name="twitter:description" content="Get in touch with Blue Planet Contact about communications strategy, grant writing, or philanthropic advisory for conservation.">
+<meta name="twitter:image" content="https://blueplanetcontact.org/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="wordmark-for-light-backgrounds.png" alt="Blue Planet Contact"></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">&#9776;</button>
+    <ul class="nav" id="nav"><li><a href="about.html">About</a></li><li><a href="expertise.html">Expertise</a></li><li><a href="contact.html" aria-current="page">Contact</a></li></ul>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <span class="label" style="color:#8FC1DE">Contact</span>
+    <h1>Let&rsquo;s talk.</h1>
+    <p>Tell us about your organization or your giving priorities, and how we might help.</p>
+  </div>
+</section>
+
+<section class="s-white">
+  <div class="wrap contact-grid">
+    <div>
+      <h2>Get in touch</h2>
+      <p>Prefer email? Reach us directly at <a href="mailto:hello@blueplanetcontact.org"><strong>hello@blueplanetcontact.org</strong></a></p>
+      <p>Brooklyn, NY</p>
+    </div>
+    <form class="contact-form" action="https://formspree.io/f/mrpbzerj" method="POST">
+      <div class="form-row"><label for="name">Name</label><input type="text" id="name" name="name" required></div>
+      <div class="form-row"><label for="email">Email</label><input type="email" id="email" name="email" required></div>
+      <div class="form-row"><label for="message">Message</label><textarea id="message" name="message" rows="6" required></textarea></div>
+      <button type="submit" class="btn btn-dark">Send message</button>
+    </form>
+  </div>
+</section>
+
+<section class="quote">
+  <div class="wrap">
+    <blockquote>
+      <p>&ldquo;Only a free and unrestrained press can effectively expose deception in government.&rdquo;</p>
+      <footer><strong>Justice Hugo Black</strong><span><em>New York Times Co. v. United States</em>, 1971</span></footer>
+    </blockquote>
+  </div>
+</section>
+<svg class="horizon" viewBox="0 0 1200 240" preserveAspectRatio="none" role="img" aria-label="Horizon of gold sky, blue water and green land" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="240" fill="#E8A93C"/>
+  <path d="M0 120 Q 150 85, 300 120 T 600 120 T 900 120 T 1200 120 L1200 240 L0 240 Z" fill="#3E82A0"/>
+  <path d="M0 175 Q 200 140, 400 175 T 800 175 T 1200 175 L1200 240 L0 240 Z" fill="#7C9463"/>
+</svg>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <img src="wordmark-for-dark-backgrounds.png" alt="Blue Planet Contact">
+        <div>Brooklyn, NY &middot; <a href="mailto:hello@blueplanetcontact.org">hello@blueplanetcontact.org</a></div>
+      </div>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="expertise.html">Expertise</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="bottom">&copy; 2026 Blue Planet Contact. Brooklyn, NY.</div>
+  </div>
+</footer>
+<script>
+  var t=document.getElementById('navToggle'),n=document.getElementById('nav');
+  t.addEventListener('click',function(){n.classList.toggle('open');});
+  n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){n.classList.remove('open');});});
+</script>
+</body>
+</html>
