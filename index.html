@@ -8,17 +8,17 @@
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="256x256" href="favicon-256.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="canonical" href="https://blueplanetcontact.org/">
+<meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Blue Planet Contact">
-<meta property="og:description" content="Strategy, clear communications, and funding channeled to where it matters most — supporting environmental organizations and helping donors maximize their impact.">
+<meta property="og:title" content="Blue Planet Contact — Conservation Strategy &amp; Philanthropic Advisory">
+<meta property="og:description" content="Blue Planet Contact provides communications strategy, grant writing, and philanthropic advisory for conservation organizations and funders across North America, Africa, and Latin America.">
 <meta property="og:image" content="https://blueplanetcontact.org/og-image.png">
 <meta property="og:url" content="https://blueplanetcontact.org/">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Blue Planet Contact">
-<meta name="twitter:description" content="Strategy, clear communications, and funding channeled to where it matters most.">
+<meta name="twitter:title" content="Blue Planet Contact — Conservation Strategy &amp; Philanthropic Advisory">
+<meta name="twitter:description" content="Blue Planet Contact provides communications strategy, grant writing, and philanthropic advisory for conservation organizations and funders across North America, Africa, and Latin America.">
 <meta name="twitter:image" content="https://blueplanetcontact.org/og-image.png">
-<link rel="canonical" href="https://blueplanetcontact.org/">
-<meta name="robots" content="index, follow">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -32,18 +32,38 @@
       "image": "https://blueplanetcontact.org/og-image.png",
       "description": "Communications strategy, grant writing, capacity building, and philanthropic advisory for conservation organizations and the funders who support them.",
       "email": "hello@blueplanetcontact.org",
-      "address": { "@type": "PostalAddress", "addressLocality": "Brooklyn", "addressRegion": "NY", "addressCountry": "US" },
-      "areaServed": ["North America", "Africa", "Latin America"],
-      "knowsAbout": ["Conservation strategy", "Philanthropic advisory", "Grant writing", "Conservation communications", "Rights-based tropical forest protection", "Marine and coastal conservation"],
-      "founder": { "@id": "https://blueplanetcontact.org/#kim" }
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Brooklyn",
+        "addressRegion": "NY",
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        "North America",
+        "Africa",
+        "Latin America"
+      ],
+      "knowsAbout": [
+        "Conservation strategy",
+        "Philanthropic advisory",
+        "Grant writing",
+        "Conservation communications",
+        "Rights-based tropical forest protection",
+        "Marine and coastal conservation"
+      ],
+      "founder": {
+        "@id": "https://blueplanetcontact.org/#kim"
+      }
     },
     {
       "@type": "Person",
       "@id": "https://blueplanetcontact.org/#kim",
       "name": "Kim Chaix",
       "jobTitle": "Founder & Director",
-      "worksFor": { "@id": "https://blueplanetcontact.org/#org" },
-      "url": "https://blueplanetcontact.org/"
+      "worksFor": {
+        "@id": "https://blueplanetcontact.org/#org"
+      },
+      "url": "https://blueplanetcontact.org/about.html"
     }
   ]
 }
@@ -51,493 +71,144 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --ink:#16262E;
-    --sand:#F6F2E9;
-    --sand-deep:#EDE6D6;
-    --ocean:#1F5C73;
-    --ocean-light:#5E93A6;
-    --moss:#5B6E4A;
-    --gold:#B8935A;
-    --cream:#FBF8F1;
-    --max:1100px;
-  }
-  *{box-sizing:border-box;margin:0;padding:0;}
-  html{scroll-behavior:smooth;}
-  body{
-    font-family:'Work Sans', sans-serif;
-    background:var(--sand);
-    color:var(--ink);
-    line-height:1.6;
-    font-size:17px;
-  }
-  h1,h2,h3{
-    font-family:'Fraunces', serif;
-    font-weight:500;
-    line-height:1.15;
-    letter-spacing:-0.01em;
-  }
-  a{color:inherit;}
-  .wrap{max-width:var(--max);margin:0 auto;padding:0 32px;}
-
-  /* NAV */
-  header{
-    position:sticky;top:0;z-index:50;
-    background:rgba(22,38,46,0.92);
-    backdrop-filter:blur(6px);
-  }
-  nav.wrap{
-    display:flex;align-items:center;justify-content:space-between;
-    height:72px;
-  }
-  .wordmark{
-    display:flex;
-    align-items:center;
-    text-decoration:none;
-  }
-  .wordmark img{
-    height:26px;
-    display:block;
-  }
-  .navlinks{display:flex;list-style:none;flex-wrap:nowrap;}
-  .navlinks li{display:block;margin-left:36px;}
-  .navlinks a{
-    color:var(--sand-deep);
-    text-decoration:none;
-    font-size:15px;
-    font-weight:500;
-    transition:color .2s ease;
-  }
-  .navlinks a:hover{color:var(--gold);}
-  .navtoggle{display:none;background:none;border:none;color:var(--cream);font-size:26px;cursor:pointer;}
-
-  @media (max-width:720px){
-    .navlinks{
-      position:fixed;top:72px;left:0;right:0;
-      background:var(--ink);
-      flex-direction:column;gap:0;
-      max-height:0;overflow:hidden;
-      transition:max-height .3s ease;
-    }
-    .navlinks.open{max-height:320px;}
-    .navlinks a{display:block;padding:16px 32px;border-top:1px solid rgba(255,255,255,.08);}
-    .navtoggle{display:block;}
-  }
-
-  /* HERO */
-  .hero{
-    background:linear-gradient(180deg, var(--ink) 0%, #1C333D 100%);
-    color:var(--cream);
-    padding:96px 0 80px;
-    position:relative;
-    overflow:hidden;
-  }
-  .hero .wrap{position:relative;z-index:2;}
-  .hero h1{
-    font-size:clamp(1.9rem, 4vw, 2.9rem);
-    max-width:none;
-    color:var(--cream);
-  }
-  .hero h1 .h-line{display:block;}
-  .hero h1 .h-init{font-size:1.25em;font-weight:600;line-height:1;}
-  .hero h1 .h-gold{color:#E8A93C;}
-  .hero h1 .h-sky{color:#8FC1DE;}
-  .hero h1 .h-sage{color:#9DB57E;}
-  .hero .tagline{
-    margin-top:22px;
-    font-size:clamp(1.05rem, 2vw, 1.3rem);
-    color:var(--ocean-light);
-    font-weight:500;
-    max-width:34ch;
-  }
-  .horizon{
-    display:block;
-    margin:48px 0 40px;
-    width:120px;
-    height:2px;
-    background:var(--gold);
-    border:none;
-  }
-  .hero .lede{
-    max-width:640px;
-    font-size:1.05rem;
-    color:#D9DFDE;
-  }
-  .hero .lede p{margin-bottom:18px;}
-  .hero .lede p:last-child{margin-bottom:0;}
-
-  /* SECTION HEADINGS */
-  .section{padding:88px 0;}
-  .section h2{
-    font-size:clamp(1.7rem, 3vw, 2.2rem);
-    color:var(--ink);
-    margin-bottom:12px;
-  }
-  .section .kicker{
-    font-size:15px;
-    color:var(--ocean);
-    font-weight:600;
-    margin-bottom:8px;
-  }
-  .section-intro{
-    max-width:600px;
-    color:#3F4E54;
-    margin-bottom:48px;
-  }
-
-  /* SERVICES */
-  .services{background:var(--sand);}
-  .service-cols{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    grid-column-gap:56px;
-  }
-  @media (max-width:720px){.service-cols{grid-template-columns:1fr;}
-    .service-col + .service-col{margin-top:44px;}}
-  .service-col h3{
-    font-size:1.25rem;
-    color:var(--ocean);
-    margin-bottom:22px;
-    padding-bottom:14px;
-    border-bottom:2px solid var(--sand-deep);
-  }
-  .service-item{
-    padding:16px 0 16px 20px;
-    border-left:3px solid var(--sand-deep);
-    margin-bottom:4px;
-  }
-  .service-item strong{
-    display:block;
-    font-size:1.02rem;
-    margin-bottom:4px;
-    color:var(--ink);
-  }
-  .service-item p{color:#4A5A60;font-size:.97rem;}
-  .conflict-note{
-    margin-top:40px;
-    padding:22px 24px;
-    background:var(--sand-deep);
-    border-left:3px solid var(--gold);
-    font-size:.95rem;
-    color:#3F4E54;
-    max-width:640px;
-  }
-
-  /* SPECIALTY */
-  .specialty{
-    background:var(--ink);
-    color:var(--cream);
-  }
-  .specialty .kicker{color:var(--gold);}
-  .specialty h2{color:var(--cream);}
-  .specialty .section-intro{color:#C7D0D2;}
-  .spec-list{list-style:none;}
-  .spec-item{
-    display:flex;
-    justify-content:space-between;
-    align-items:baseline;
-    gap:24px;
-    padding:24px 0;
-    border-top:1px solid rgba(251,248,241,0.14);
-  }
-  .spec-item:last-child{border-bottom:1px solid rgba(251,248,241,0.14);}
-  .spec-name{
-    font-family:'Fraunces', serif;
-    font-size:1.15rem;
-    color:var(--cream);
-  }
-  .spec-region{
-    font-size:.92rem;
-    color:var(--ocean-light);
-    text-align:right;
-    max-width:340px;
-  }
-  .spec-tag{
-    display:inline-block;
-    font-size:.78rem;
-    color:var(--gold);
-    margin-left:10px;
-    font-weight:600;
-  }
-  @media (max-width:640px){
-    .spec-item{flex-direction:column;align-items:flex-start;gap:6px;}
-    .spec-region{text-align:left;}
-  }
-  .geo-note{
-    margin-top:32px;
-    font-size:.95rem;
-    color:#AEBBBD;
-  }
-
-  /* ABOUT */
-  .about{background:var(--sand);}
-  .about-grid{
-    display:grid;
-    grid-template-columns:440px 1fr;
-    grid-column-gap:56px;
-    align-items:start;
-  }
-  @media (max-width:900px){.about-grid{grid-template-columns:1fr;row-gap:28px;}.about-photo-left{max-width:340px;}}
-  .about-photo-stack{
-    display:flex;
-    flex-direction:column;
-    gap:12px;
-  }
-  .about-photo-img{
-    width:100%;
-    height:auto;
-    object-fit:cover;
-    display:block;
-    background:var(--ink);
-  }
-  .about-photo-wide{margin-top:28px;}
-  .about-copy p{margin-bottom:18px;color:#33454B;}
-  .about-copy p:last-child{margin-bottom:0;}
-  .about-name{
-    font-size:.92rem;
-    color:var(--ocean);
-    font-weight:600;
-    margin-bottom:6px;
-  }
-
-  /* CONTACT */
-  .contact{
-    background:linear-gradient(180deg,#1C333D 0%, var(--ink) 100%);
-    color:var(--cream);
-    text-align:left;
-  }
-  .contact h2{color:var(--cream);max-width:16ch;}
-  .contact-email{
-    display:inline-block;
-    margin-top:28px;
-    font-size:1.3rem;
-    font-family:'Fraunces', serif;
-    color:var(--gold);
-    text-decoration:none;
-    border-bottom:2px solid transparent;
-    transition:border-color .2s ease;
-  }
-  .contact-email:hover{border-color:var(--gold);}
-
-  .contact-form{
-    max-width:480px;
-    margin-top:36px;
-  }
-  .form-row{margin-bottom:20px;}
-  .form-row label{
-    display:block;
-    font-size:.9rem;
-    color:#AEBBBD;
-    margin-bottom:6px;
-  }
-  .form-row input, .form-row textarea{
-    width:100%;
-    padding:12px 14px;
-    background:rgba(251,248,241,0.06);
-    border:1px solid rgba(251,248,241,0.2);
-    border-radius:2px;
-    color:var(--cream);
-    font-family:'Work Sans', sans-serif;
-    font-size:.98rem;
-  }
-  .form-row input:focus, .form-row textarea:focus{
-    outline:2px solid var(--gold);
-    outline-offset:1px;
-  }
-  .form-submit{
-    background:var(--gold);
-    color:var(--ink);
-    border:none;
-    padding:13px 28px;
-    font-size:.98rem;
-    font-weight:600;
-    font-family:'Work Sans', sans-serif;
-    cursor:pointer;
-    border-radius:2px;
-    transition:opacity .2s ease;
-  }
-  .form-submit:hover{opacity:.88;}
-  .contact-alt{
-    margin-top:28px;
-    font-size:.92rem;
-    color:#AEBBBD;
-  }
-  .contact-email-inline{
-    color:var(--gold);
-    text-decoration:underline;
-  }
-
-  footer{
-    background:var(--ink);
-    color:#8B999C;
-    font-size:.85rem;
-    padding:28px 0 36px;
-    border-top:1px solid rgba(251,248,241,0.1);
-  }
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-<header>
-  <nav class="wrap">
-    <a href="#top" class="wordmark"><img src="wordmark.png" alt="Blue Planet Contact"></a>
-    <button class="navtoggle" id="navToggle" aria-label="Toggle menu">☰</button>
-    <ul class="navlinks" id="navLinks">
-      <li><a href="#services">Services</a></li>
-      <li><a href="#specialty">Specialty Areas</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="wordmark-for-light-backgrounds.png" alt="Blue Planet Contact"></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">&#9776;</button>
+    <ul class="nav" id="nav"><li><a href="about.html">About</a></li><li><a href="expertise.html">Expertise</a></li><li><a href="contact.html">Contact</a></li></ul>
+  </div>
 </header>
 
-<section class="hero" id="top">
+<section class="hero">
   <div class="wrap">
     <h1><span class="h-line"><span class="h-init h-gold">S</span>trategy</span><span class="h-line"><span class="h-init h-sky">C</span>lear communications</span><span class="h-line"><span class="h-init h-sage">A</span>nd funding channeled to where it matters most</span></h1>
     <p class="tagline">Supporting the organizations doing the work on the ground. And helping donors maximize their impact dollars.</p>
-    <hr class="horizon">
-    <div class="lede">
+    <div class="actions">
+      <a class="btn btn-gold" href="about.html">About us</a>
+      <a class="btn btn-ghost" href="expertise.html">Our expertise</a>
+    </div>
+  </div>
+</section>
+
+<section class="s-white">
+  <div class="wrap statement">
+    <div>
+      <span class="label">What we do</span>
+      <h2>Conservation succeeds when the right strategy, the right story, and the right funding find each other.</h2>
+    </div>
+    <div>
       <p>Blue Planet Contact helps environmental organizations and social entrepreneurs sharpen their strategy, tell their story with clarity, and secure the funding they need to protect the places and people that depend on them.</p>
-      <p>We also advise philanthropic funders committed to socially responsible land-based, coastal, and marine environmental protection. We help them identify impactful partners, vet opportunities, and map the landscape so that funding can move quickly to where it will do the most good. We are especially sensitive and experienced with managing Indigenous Peoples’ and Locally-led partnerships.</p>
+      <p>We also advise philanthropic funders committed to socially responsible land-based, coastal, and marine environmental protection. We help them identify impactful partners, vet opportunities, and map the landscape so that funding can move quickly to where it will do the most good. We are especially sensitive and experienced with managing Indigenous Peoples&rsquo; and Locally-led partnerships.</p>
+      <a class="link-arrow" href="about.html">Learn more</a>
     </div>
   </div>
 </section>
 
-<section class="section services" id="services">
+<section class="quote">
   <div class="wrap">
-    <div class="kicker">Services</div>
-    <h2>Two pieces of the same puzzle</h2>
-    <p class="section-intro">More than 20 years of nonprofit leadership, communications, and fundraising — applied on behalf of the organizations doing environmental protection work, and the funders who support them.</p>
+    <blockquote>
+      <p>&ldquo;The challenge is to restore the home of the tadpoles and give back to our children a world of beauty and wonder.&rdquo;</p>
+      <footer><strong>Wangari Maathai</strong><span>Nobel Peace Prize lecture, 2004</span></footer>
+    </blockquote>
+  </div>
+</section>
 
-    <div class="service-cols">
-      <div class="service-col">
+<svg class="horizon" viewBox="0 0 1200 240" preserveAspectRatio="none" role="img" aria-label="Horizon of gold sky, blue water and green land" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="240" fill="#E8A93C"/>
+  <path d="M0 120 Q 150 85, 300 120 T 600 120 T 900 120 T 1200 120 L1200 240 L0 240 Z" fill="#3E82A0"/>
+  <path d="M0 175 Q 200 140, 400 175 T 800 175 T 1200 175 L1200 240 L0 240 Z" fill="#7C9463"/>
+</svg>
+
+<section class="s-sand">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="label">Services</span>
+      <h2>Two pieces of the same puzzle</h2>
+      <p>More than 20 years of nonprofit leadership, communications, and fundraising &mdash; applied on behalf of the organizations doing environmental protection work, and the funders who support them.</p>
+    </div>
+    <div class="cards">
+      <div class="card">
         <h3>For Organizations</h3>
-        <div class="service-item">
-          <strong>Strategic Planning &amp; Leadership</strong>
-          <p>Organizational strategy support shaped by two decades of hands-on experience on the ground, with stakeholders, and in leadership roles across environmental protection and social impact.</p>
-        </div>
-        <div class="service-item">
-          <strong>Communications Strategy &amp; Assets</strong>
-          <p>Messaging and campaign planning that helps you reach your target audience.</p>
-        </div>
-        <div class="service-item">
-          <strong>Capacity Building</strong>
-          <p>Engaging teams in structured processes designed to strengthen management, inclusion, governance, and programmatic impact.</p>
-        </div>
-        <div class="service-item">
-          <strong>Grant Writing &amp; Reporting</strong>
-          <p>Compelling, well-researched proposals grounded in a deep understanding of the funding landscape and tailored to the funder's requirements.</p>
-        </div>
+        <p class="lead">Strategy, story, and funding for the teams doing the work.</p>
+        <ul>
+          <li>Strategic Planning &amp; Leadership</li>
+          <li>Communications Strategy &amp; Assets</li>
+          <li>Capacity Building</li>
+          <li>Grant Writing &amp; Reporting</li>
+        </ul>
+        <a class="link-arrow" href="expertise.html#organizations">See how we help</a>
       </div>
-
-      <div class="service-col">
+      <div class="card alt">
         <h3>For Funders</h3>
-        <div class="service-item">
-          <strong>Philanthropic Advisory</strong>
-          <p>Opportunity identification, partner vetting, and market analysis that helps funders allocate resources with confidence and purpose, not just urgency.</p>
-        </div>
-        <div class="service-item">
-          <p><strong>Ecosystem-level thinking:</strong> We read the field to spot where an additional funder’s capital would do the most to raise the impact of the sector overall.</p>
-        </div>
-        <div class="service-item">
-          <p><strong>Creating opportunities:</strong> We find promising leaders and back them with the funding and support to launch work that wouldn’t otherwise get off the ground.</p>
-        </div>
-        <div class="service-item">
-          <p><strong>Complex judgment:</strong> We help weigh the trade-offs behind a grant, such as whether the talent involved would find support elsewhere, and how the project fits into the wider ecosystem.</p>
-        </div>
-        <div class="service-item">
-          <p><strong>Coordination:</strong> We help judge whether a donor collaborative would add value in a given area and, if so, which organizations are best placed to join it.</p>
-        </div>
-      </div>
-    </div>
-
-    <p class="conflict-note">Blue Planet Contact works with both funders and the organizations they support, which is what allows for genuine landscape-level insight. <strong>Active conflicts are disclosed and managed transparently.</strong></p>
-  </div>
-</section>
-
-<section class="section specialty" id="specialty">
-  <div class="wrap">
-    <div class="kicker">Specialty Areas</div>
-    <h2>Where the work happens</h2>
-    <p class="section-intro">On-the-ground experience across four regions and program areas. Our work spans environmental protection, social advocacy, and campaigns; public-private partnerships; monitoring, evaluation &amp; learning (MEL); fiscal compliance and institutional grant reporting (USG, EU, multilateral funders); and event strategy and implementation at Conference of the Parties (COP).</p>
-
-    <ul class="spec-list">
-      <li class="spec-item">
-        <span class="spec-name">North America Environmental Conservation</span>
-        <span class="spec-region">United States &amp; Canada</span>
-      </li>
-      <li class="spec-item">
-        <span class="spec-name">Africa Conservation &amp; Social Entrepreneurship</span>
-        <span class="spec-region">Sub-Saharan Africa</span>
-      </li>
-      <li class="spec-item">
-        <span class="spec-name">Rights-Based Tropical Forest Protection</span>
-        <span class="spec-region">In support of Indigenous and Local communities in Latin America &amp; the Congo Basin</span>
-      </li>
-      <li class="spec-item">
-        <span class="spec-name">Marine &amp; Coastal Conservation<span class="spec-tag">Emerging focus</span></span>
-        <span class="spec-region">New horizons</span>
-      </li>
-    </ul>
-    <p class="geo-note">Blue Planet Contact works with US-based organizations, and with international organizations seeking US-based financing.</p>
-  </div>
-</section>
-
-<section class="section about" id="about">
-  <div class="wrap">
-    <div class="kicker">About</div>
-    <h2>Kim Chaix</h2>
-    <div class="about-grid" style="margin-top:36px;">
-      <img class="about-photo-img about-photo-left" src="kim-photo-2.jpg" alt="Kim Chaix with a capybara in Latin America">
-      <div class="about-copy">
-        <p>Kim Chaix has more than 20 years of senior leadership at the intersection of human rights and environmental conservation across Latin America, Africa, and the US.</p>
-        <p>Kim began his career as a journalist and documentary producer for outlets including National Geographic, PBS, ABC News, and Animal Planet, before turning to environmental conservation and philanthropy full-time.</p>
-        <p>Over the course of his career, Kim has held senior leadership roles at organizations including Rainforest Foundation US and Virunga Fund Inc., where he significantly grew philanthropic revenue and helped direct tens of millions of dollars in institutional and private funding to conservation and development programs. He also founded The Charcoal Project, a nonprofit expanding access to clean biomass energy across sub-Saharan Africa, and contributed to communications strategy and major land conservation efforts at The Nature Conservancy's New York chapter.</p>
-        <p>A native French and Spanish speaker, Kim grew up between France and Nicaragua. He now lives in Brooklyn, NY, with his partner, their cat, and Sibo, a knucklehead Australian Shepherd. Outside of work, he sails and competes in triathlons.</p>
-        <img class="about-photo-img about-photo-wide" src="kim-photo.jpg" alt="Kim Chaix speaking at the United Nations Climate Change conference">
+        <p class="lead">Landscape insight so capital lands where it will do the most good.</p>
+        <ul>
+          <li>Opportunity identification</li>
+          <li>Partner vetting</li>
+          <li>Market analysis</li>
+          <li>Donor coordination</li>
+        </ul>
+        <a class="link-arrow" href="expertise.html#funders">See how we help</a>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section contact" id="contact">
+<section class="band">
   <div class="wrap">
-    <div class="kicker" style="color:var(--gold);">Get in touch</div>
-    <h2>Let's talk.</h2>
-
-    <form class="contact-form" action="https://formspree.io/f/mrpbzerj" method="POST">
-      <div class="form-row">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
-      </div>
-      <div class="form-row">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
-      </div>
-      <div class="form-row">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-      </div>
-      <button type="submit" class="form-submit">Send message</button>
-    </form>
-
-    <p class="contact-alt">Prefer email? Reach us directly at <a class="contact-email-inline" href="mailto:hello@blueplanetcontact.org">hello@blueplanetcontact.org</a></p>
+    <span class="label" style="color:#9FD0E8">Track record</span>
+    <h2>Kim Chaix has helped direct tens of millions of dollars in institutional and private funding to conservation and development programs.</h2>
+    <p>Across Latin America, Africa, and the US, more than 20 years of senior leadership at the intersection of human rights and environmental conservation.</p>
+    <a class="btn btn-gold" href="about.html">About Kim</a>
   </div>
 </section>
 
-<footer>
+<section class="s-white">
   <div class="wrap">
-    &copy; 2026 Blue Planet Contact. Brooklyn, NY.
+    <div class="section-head">
+      <span class="label">Specialty areas</span>
+      <h2>Where the work happens</h2>
+      <p>On-the-ground experience across four regions and program areas.</p>
+    </div>
+    <div class="regions">
+      <div class="region"><span class="num">01</span><h3>North America Environmental Conservation</h3><p>United States &amp; Canada</p></div>
+      <div class="region"><span class="num">02</span><h3>Africa Conservation &amp; Social Entrepreneurship</h3><p>Sub-Saharan Africa</p></div>
+      <div class="region"><span class="num">03</span><h3>Rights-Based Tropical Forest Protection</h3><p>In support of Indigenous and Local communities in Latin America &amp; the Congo Basin</p></div>
+      <div class="region"><span class="num">04</span><h3>Marine &amp; Coastal Conservation</h3><p>New horizons</p><span class="tag">Emerging focus</span></div>
+    </div>
+    <p style="margin-top:28px;color:var(--body);max-width:760px">Blue Planet Contact works with US-based organizations, and with international organizations seeking US-based financing.</p>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>We are always keen to discuss how we can support your work.</h2>
+    <a class="btn btn-dark" href="contact.html">We&rsquo;d love to hear from you</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <img src="wordmark-for-dark-backgrounds.png" alt="Blue Planet Contact">
+        <div>Brooklyn, NY &middot; <a href="mailto:hello@blueplanetcontact.org">hello@blueplanetcontact.org</a></div>
+      </div>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="expertise.html">Expertise</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="bottom">&copy; 2026 Blue Planet Contact. Brooklyn, NY.</div>
   </div>
 </footer>
-
 <script>
-  const toggle = document.getElementById('navToggle');
-  const links = document.getElementById('navLinks');
-  toggle.addEventListener('click', () => links.classList.toggle('open'));
-  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+  var t=document.getElementById('navToggle'),n=document.getElementById('nav');
+  t.addEventListener('click',function(){n.classList.toggle('open');});
+  n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){n.classList.remove('open');});});
 </script>
-
 </body>
 </html>

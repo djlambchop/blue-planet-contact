@@ -2,6 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://blueplanetcontact.org/</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://blueplanetcontact.org/about.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://blueplanetcontact.org/expertise.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://blueplanetcontact.org/contact.html</loc>
+    <lastmod>2026-11-16</lastmod>
   </url>
 </urlset>
