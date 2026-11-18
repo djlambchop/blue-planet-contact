@@ -145,3 +145,26 @@ section{padding:96px 0;}
 .quote.dark p{color:var(--cream);}
 .quote.dark footer{color:#9FB4BE;}
 .quote.dark footer strong{color:var(--gold);}
+
+/* HERO PHOTO (home) */
+.hero-photo{
+  background-color:var(--navy);
+  background-image:linear-gradient(90deg,rgba(22,38,46,.92) 0%,rgba(22,38,46,.78) 38%,rgba(22,38,46,.18) 72%,rgba(22,38,46,0) 100%),url('hero-yellow-tree.jpg');
+  background-size:cover;
+  background-position:center 62%;
+  padding:140px 0 128px;
+}
+.hero-photo h1{max-width:12em;font-size:clamp(2rem,4.4vw,3.3rem);text-shadow:0 2px 24px rgba(22,38,46,.45);}
+.hero-photo .tagline{max-width:520px;text-shadow:0 1px 16px rgba(22,38,46,.5);}
+@media(max-width:760px){
+  .hero-photo{background-image:linear-gradient(180deg,rgba(22,38,46,.88) 0%,rgba(22,38,46,.72) 100%),url('hero-yellow-tree.jpg');background-position:70% center;padding:96px 0 88px;}
+  .hero-photo h1{max-width:none;}
+}
+
+/* PHOTO PAIR (expertise) */
+.photo-pair{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:44px;}
+.photo-pair figure{margin:0;}
+.photo-pair img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;}
+.photo-pair figcaption{margin-top:12px;font-size:14px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ocean);}
+@media(max-width:700px){.photo-pair{grid-template-columns:1fr;}}
+.photo-pair figcaption span{display:block;margin-top:4px;font-size:13px;font-weight:400;letter-spacing:0;text-transform:none;color:var(--body);}
